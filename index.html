@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premier Tier - Gadgets, Collectibles & Innovative Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1a3a1a;
+            background: linear-gradient(135deg, #f0f8e8 0%, #fffde7 50%, #e8f5e9 100%);
+        }
+
+        header {
+            background: linear-gradient(135deg, #2e7d32 0%, #fdd835 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 0 20px;
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .emoji {
+            font-size: 3rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        nav {
+            background: #2e7d32;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav a {
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: #1b5e20;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(46, 125, 50, 0.15);
+            border: 2px solid #2196f3;
+            border-top: 4px solid #e91e63;
+        }
+
+        h2 {
+            color: #2e7d32;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #e91e63;
+            padding-bottom: 0.5rem;
+        }
+
+        .product-grid, .service-grid, .invention-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f1f8f4 0%, #fffde7 50%, #e8f5e9 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid #2196f3;
+            border-left: 5px solid #e91e63;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(46, 125, 50, 0.3);
+        }
+
+        .card h3 {
+            color: #1b5e20;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #2e7d32;
+            line-height: 1.8;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #388e3c;
+            margin-top: 1rem;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #43a047 0%, #fdd835 50%, #66bb6a 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(46, 125, 50, 0.3);
+        }
+
+        .social-links {
+            background: linear-gradient(135deg, #2e7d32 0%, #fdd835 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .social-links h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            background: white;
+            color: #2e7d32;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+            border-left: 5px solid #2196f3;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 2.5rem;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 700px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: slideDown 0.3s;
+            border-top: 5px solid #e91e63;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #2196f3;
+        }
+
+        .modal-header h3 {
+            color: #1b5e20;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .close-modal {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #666;
+            cursor: pointer;
+            border: none;
+            background: none;
+            transition: color 0.3s;
+        }
+
+        .close-modal:hover {
+            color: #d32f2f;
+        }
+
+        .modal-body {
+            color: #2e7d32;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .modal-body p {
+            margin-bottom: 1rem;
+        }
+
+        .modal-body strong {
+            color: #1b5e20;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { 
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .detail-content {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #e91e63;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        .detail-content h4 {
+            color: #1b5e20;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .detail-content p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .emoji {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <span class="emoji">🛍️</span>
+            <h1>Premier Tier</h1>
+            <span class="emoji">🔧</span>
+        </div>
+        <div style="text-align: center; color: white; font-size: 1.2rem; margin-top: 0.5rem; font-style: italic;">by AJJ</div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#scanner">Barcode Scanner</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#inventions">Inventions</a></li>
+            <li><a href="#interests">Your Interests</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>Welcome to Premier Tier!</h2>
+            <p style="font-size: 1.2rem; color: #2e7d32;">Your one-stop shop for quality resold gadgets, collectibles, professional services, and innovative products. Everything is <strong>personalized for you</strong> to bring you great value and cutting-edge solutions!</p>
+        </section>
+
+        <section id="products">
+            <h2>🔥 Featured Products</h2>
+            <p style="margin-bottom: 2rem; color: #2e7d32;">Discover our curated selection of gadgets and collectibles, all <strong>personalized for you</strong> and priced affordably between $10-$20!</p>
+            
+            <div class="product-grid">
+                <div class="card">
+                    <h3>📱 Tech Gadgets</h3>
+                    <p>Quality pre-owned electronics including phone accessories, Bluetooth speakers, wireless earbuds, and portable chargers. All tested and guaranteed to work!</p>
+                    <p class="price">$10 - $20</p>
+                    <button class="cta-button product-detail-btn" data-category="tech">Learn More</button>
+                    <div id="tech-details" class="detail-content" style="display: none;">
+                        <h4>Why Choose Our Tech Gadgets?</h4>
+                        <p>Every tech item we sell goes through a rigorous testing process to ensure it works perfectly. We source our gadgets from trusted suppliers and thoroughly inspect each product before listing. Whether you're looking for a backup charger, a new pair of wireless earbuds for your commute, or a Bluetooth speaker for weekend hangouts, we've got you covered.</p>
+                        <p>Our tech selection includes popular brands at unbeatable prices. From phone cases and screen protectors to smart watches and fitness trackers, we regularly update our inventory with the latest finds. Many items are gently used or open-box, meaning you get near-new quality at a fraction of the original cost.</p>
+                        <p>We stand behind every gadget with our satisfaction guarantee. If something doesn't work as described, we'll make it right. Browse our current selection or tell us what specific tech you're looking for in the interest form below, and we'll keep an eye out for it!</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>🎮 Gaming Collectibles</h3>
+                    <p>Vintage gaming items, action figures, trading cards, and limited edition collectibles. Perfect for enthusiasts and collectors alike!</p>
+                    <p class="price">$10 - $20</p>
+                    <button class="cta-button product-detail-btn" data-category="gaming">Learn More</button>
+                    <div id="gaming-details" class="detail-content" style="display: none;">
+                        <h4>Discover Rare Gaming Treasures</h4>
+                        <p>Are you a collector searching for that perfect piece to complete your collection? We specialize in finding vintage and modern gaming collectibles that bring back memories and add value to your collection. From classic Nintendo and Sega memorabilia to contemporary limited editions, our inventory is constantly evolving with exciting finds.</p>
+                        <p>Our gaming collectibles include action figures from popular franchises, rare trading cards (Pokémon, Magic: The Gathering, Yu-Gi-Oh!), vintage game cartridges, promotional items, and limited edition merchandise. Each item is authenticated and carefully inspected to ensure you're getting genuine collectibles in great condition.</p>
+                        <p>Whether you're a serious collector or just starting out, we pride ourselves on fair pricing and transparent descriptions. Every collectible comes with details about its condition, rarity, and any special features. Let us know what you're hunting for in the interest form below – we have connections with fellow collectors and can help track down specific items!</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>🎧 Audio & Accessories</h3>
+                    <p>Headphones, speakers, cables, and audio accessories. Great sound quality without breaking the bank!</p>
+                    <p class="price">$10 - $20</p>
+                    <button class="cta-button product-detail-btn" data-category="audio">Learn More</button>
+                    <div id="audio-details" class="detail-content" style="display: none;">
+                        <h4>Premium Sound, Budget-Friendly Prices</h4>
+                        <p>Music lovers and audiophiles, rejoice! We offer a carefully curated selection of audio equipment that delivers impressive sound quality without the premium price tag. From over-ear headphones for immersive listening sessions to compact earbuds for on-the-go convenience, we test every audio product to ensure it meets our quality standards.</p>
+                        <p>Our audio inventory includes Bluetooth speakers perfect for outdoor gatherings, high-quality cables and adapters for your home setup, microphones for content creators, and specialty items like DACs and amplifiers. Many of our products come from well-known brands like Sony, JBL, Bose, and Audio-Technica, sourced through overstock deals and careful reselling.</p>
+                        <p>We understand that audio quality is personal, which is why we provide detailed descriptions of sound profiles, battery life, connectivity options, and condition notes. Whether you need studio monitors for production work or just a reliable pair of workout earbuds, we'll help you find the perfect match. Check out our current inventory or tell us your audio needs in the interest form!</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>🏠 Home & Lifestyle</h3>
+                    <p>Smart home gadgets, desk accessories, LED lights, and other lifestyle products to enhance your daily routine.</p>
+                    <p class="price">$10 - $20</p>
+                    <button class="cta-button product-detail-btn" data-category="home">Learn More</button>
+                    <div id="home-details" class="detail-content" style="display: none;">
+                        <h4>Transform Your Space on a Budget</h4>
+                        <p>Your home should be a reflection of you, and it doesn't take a fortune to make it special. We offer an eclectic mix of home and lifestyle products that add personality, functionality, and comfort to any space. From smart plugs and LED strip lights that create ambiance, to desk organizers and productivity tools for your workspace, we've got items that make daily life just a little bit better.</p>
+                        <p>Our home collection includes practical items like kitchen gadgets, storage solutions, and cleaning tools, as well as fun lifestyle products like aromatherapy diffusers, decorative items, travel accessories, and hobby supplies. We're always on the lookout for clever products that solve everyday problems or add a touch of joy to routine tasks.</p>
+                        <p>Quality home goods shouldn't cost a fortune. Everything in this category is handpicked for its value, usefulness, or unique character. Whether you're furnishing your first apartment, looking for the perfect gift, or just want to refresh your space, browse our selection or let us know what you're looking for. We love helping people find that perfect piece that makes a house feel like home!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="scanner">
+            <h2>📱 Barcode Scanner - Check Resell Value</h2>
+            <p style="margin-bottom: 2rem; color: #2e7d32;">Scan any product barcode to instantly check its estimated resell value and market demand!</p>
+            
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div style="background: linear-gradient(135deg, #f1f8f4 0%, #e8f5e9 50%, #e3f2fd 100%); padding: 2rem; border-radius: 12px; border: 2px solid #81c784; border-left: 5px solid #2196f3;">
+                    <div id="scanner-container" style="text-align: center;">
+                        <video id="barcode-video" style="width: 100%; max-width: 500px; border-radius: 8px; display: none; margin-bottom: 1rem;"></video>
+                        <canvas id="barcode-canvas" style="display: none;"></canvas>
+                        
+                        <div id="scanner-controls">
+                            <button id="start-scan-btn" class="cta-button" style="margin: 1rem;">
+                                📷 Start Camera Scanner
+                            </button>
+                            
+                            <div style="margin: 1.5rem 0;">
+                                <p style="font-weight: bold; margin-bottom: 0.5rem;">Or enter barcode manually:</p>
+                                <input type="text" id="manual-barcode" placeholder="Enter UPC/EAN barcode" style="padding: 0.75rem; font-size: 1rem; border: 2px solid #81c784; border-radius: 8px; width: 100%; max-width: 300px; margin-bottom: 1rem;">
+                                <button id="manual-scan-btn" class="cta-button">🔍 Look Up Value</button>
+                            </div>
+                        </div>
+                        
+                        <div id="scanner-result" style="margin-top: 2rem; display: none;">
+                            <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                <h3 style="color: #1b5e20; margin-bottom: 1rem;">Scan Result</h3>
+                                <p><strong>Barcode:</strong> <span id="result-barcode"></span></p>
+                                <p><strong>Product:</strong> <span id="result-product"></span></p>
+                                <p><strong>Category:</strong> <span id="result-category"></span></p>
+                                <p style="font-size: 1.3rem; color: #388e3c; font-weight: bold; margin-top: 1rem;">
+                                    <strong>Estimated Resell Value:</strong> <span id="result-value"></span>
+                                </p>
+                                <p style="color: #666; margin-top: 1rem;"><em id="result-notes"></em></p>
+                                <button id="scan-again-btn" class="cta-button" style="margin-top: 1rem;">Scan Another</button>
+                            </div>
+                        </div>
+                        
+                        <div id="scanner-error" style="color: #d32f2f; margin-top: 1rem; display: none;"></div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box" style="margin-top: 2rem;">
+                    <strong>💡 How it works:</strong><br>
+                    • Click "Start Camera Scanner" to use your device's camera<br>
+                    • Point your camera at any UPC or EAN barcode<br>
+                    • Get instant resell value estimates based on current market data<br>
+                    • Works with electronics, collectibles, books, games, and more!
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>🛠️ Professional Services</h2>
+            <p style="margin-bottom: 2rem; color: #2e7d32;">Quality home maintenance services <strong>personalized for you</strong> that you can count on!</p>
+            
+            <div class="service-grid">
+                <div class="card">
+                    <h3>🌱 Lawn Mowing</h3>
+                    <p>Professional lawn care services to keep your yard looking pristine. Regular maintenance, edging, and cleanup included. We use quality equipment and pay attention to detail to ensure your lawn looks its best.</p>
+                    <div class="highlight-box">
+                        <strong>✓ Weekly/Bi-weekly scheduling available</strong><br>
+                        <strong>✓ Professional equipment</strong><br>
+                        <strong>✓ Reliable and punctual service</strong>
+                    </div>
+                    <button class="cta-button service-detail-btn" data-service="lawn">Learn More</button>
+                    <div id="lawn-details" class="detail-content" style="display: none;">
+                        <h4>Your Lawn, Our Pride</h4>
+                        <p>A well-maintained lawn makes a huge difference in your home's curb appeal and your outdoor enjoyment. We take lawn care seriously, treating every yard with the same attention and care we'd give our own. Our service goes beyond just mowing – we edge along walkways and driveways, trim around obstacles, and clean up all clippings to leave your property looking immaculate.</p>
+                        <p>We understand that every lawn is unique, with different grass types, terrain challenges, and aesthetic goals. That's why we customize our approach to your specific needs. Whether you have a small suburban yard or a larger property, we use commercial-grade equipment that delivers professional results while being mindful of your lawn's health. We adjust mowing height seasonally to promote healthy root growth and can work around your schedule to minimize disruption.</p>
+                        <p>Reliability is our cornerstone. We show up when we say we will, rain or shine (weather permitting), and maintain consistent service throughout the growing season. Our pricing is transparent and competitive, with no hidden fees. Many of our clients have been with us for years because they trust us to keep their lawns looking great. Let us take this chore off your plate so you can enjoy your weekends!</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>🏠 Gutter Cleaning</h3>
+                    <p>Thorough gutter cleaning to protect your home from water damage. We remove all debris, flush downspouts, and inspect for any issues. Keep your gutters flowing freely!</p>
+                    <div class="highlight-box">
+                        <strong>✓ Complete debris removal</strong><br>
+                        <strong>✓ Downspout flushing</strong><br>
+                        <strong>✓ Safety-conscious approach</strong>
+                    </div>
+                    <button class="cta-button service-detail-btn" data-service="gutter">Learn More</button>
+                    <div id="gutter-details" class="detail-content" style="display: none;">
+                        <h4>Protect Your Home's Foundation</h4>
+                        <p>Clogged gutters are more than just an eyesore – they're a serious threat to your home's structural integrity. When gutters overflow, water can damage your roof, siding, foundation, and landscaping, leading to costly repairs. Our comprehensive gutter cleaning service prevents these problems by ensuring water flows freely away from your home where it belongs.</p>
+                        <p>We don't just scoop out the visible leaves and walk away. Our thorough process includes removing all debris from gutters and downspouts, flushing the system with water to check for proper flow, and inspecting for signs of damage, sagging, or separation. We'll alert you to any issues we spot so you can address them before they become major problems. All debris is bagged and removed from your property, leaving your yard clean.</p>
+                        <p>Safety is paramount in our work. We use proper ladder techniques, safety equipment, and have liability insurance for your peace of mind. We recommend gutter cleaning at least twice a year (spring and fall), but homes surrounded by trees may benefit from more frequent service. Don't wait until water is pouring over the sides – schedule your gutter cleaning today and protect one of your biggest investments!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="inventions">
+            <h2>💡 Innovative Products</h2>
+            <p style="margin-bottom: 2rem; color: #2e7d32;">Check out our original inventions <strong>personalized for you</strong> and designed to make your life easier and more organized!</p>
+            
+            <div class="invention-grid">
+                <div class="card">
+                    <h3>🎒 Module Organization Backpack</h3>
+                    <p>Revolutionary modular backpack system with customizable interior compartments. Attach and rearrange pockets, dividers, and pouches to fit your exact needs. Perfect for students, travelers, photographers, and professionals who need adaptable storage solutions.</p>
+                    <div class="highlight-box">
+                        <strong>Features:</strong><br>
+                        • Interchangeable internal modules<br>
+                        • Magnetic/velcro attachment system<br>
+                        • Water-resistant materials<br>
+                        • Multiple configuration options<br>
+                        • Laptop compartment compatible
+                    </div>
+                    <button class="cta-button invention-detail-btn" data-invention="backpack">Learn More</button>
+                    <div id="backpack-details" class="detail-content" style="display: none;">
+                        <h4>Adapt Your Bag to Your Day</h4>
+                        <p>Tired of switching between multiple bags for different activities? The Module Organization Backpack is designed to be the only bag you'll ever need. Our patent-pending modular system features removable and repositionable interior compartments that attach via a combination of strong magnets and reinforced velcro. Whether you're heading to class, embarking on a weekend trip, or carrying camera equipment, you can reconfigure your backpack in minutes to perfectly suit the task.</p>
+                        <p>The system includes various module types: padded dividers for electronics, mesh pockets for quick-access items, zippered compartments for valuables, and bottle holders. Each module is independently removable, so you can reduce weight when you need a lighter load or expand capacity when you need to carry more. The base backpack features a spacious main compartment, dedicated laptop sleeve (fits up to 15"), water bottle pockets, and comfortable padded straps with sternum and waist support for heavier loads.</p>
+                        <p>Built from durable, water-resistant materials, this backpack is designed to withstand daily use in any environment. The modules are color-coded for easy organization, and the whole system is machine-washable (modules removed). We're so confident in this design that we offer a satisfaction guarantee. If the modular system doesn't revolutionize your daily carry, we'll work with you to make it right. This isn't just a backpack – it's an organizational system that grows and adapts with your needs.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>📦 Collapsible Shipping Crates</h3>
+                    <p>Space-saving, eco-friendly shipping and storage solution. These heavy-duty crates fold flat when not in use, saving up to 75% storage space. Ideal for moving, shipping products, organizing garages, or commercial use.</p>
+                    <div class="highlight-box">
+                        <strong>Features:</strong><br>
+                        • Folds flat in seconds<br>
+                        • Stackable design (loaded or empty)<br>
+                        • Durable plastic construction<br>
+                        • Holds up to 50 lbs<br>
+                        • Reusable and sustainable
+                    </div>
+                    <button class="cta-button invention-detail-btn" data-invention="crates">Learn More</button>
+                    <div id="crates-details" class="detail-content" style="display: none;">
+                        <h4>Maximize Space, Minimize Waste</h4>
+                        <p>Storage space is expensive, and traditional shipping crates waste enormous amounts of it when empty. Our Collapsible Shipping Crates solve this problem with an innovative folding mechanism that reduces the crate to just 25% of its assembled size. Whether you're a small business owner shipping products, a homeowner moving to a new place, or someone who needs organized garage storage, these crates transform how you think about storage and transportation.</p>
+                        <p>The design features reinforced corners and a sturdy base that can safely support up to 50 pounds of cargo. When assembled, multiple crates stack securely on top of each other, and the interlocking design prevents shifting during transport. The handles are ergonomically designed for comfortable carrying, and ventilation slots allow air circulation for items that need it. Made from recycled, recyclable industrial-grade plastic, these crates are both environmentally responsible and incredibly durable – they won't crack, warp, or degrade like cardboard alternatives.</p>
+                        <p>The folding mechanism is ingeniously simple: pull the side panels inward, collapse the ends, and the whole crate folds flat in under 10 seconds. No tools required, and the process is completely reversible. Small businesses love them for reducing shipping and storage costs. Moving companies use them as reusable alternatives to cardboard boxes. Home organizers appreciate how they collapse when seasonal items go into storage. One crate opened becomes your solution; a dozen crates collapsed take up the space of just three assembled ones. This is sustainable design that actually makes economic sense.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>🔧 Complementary Innovations</h3>
+                    <p><strong>Smart Packing Cubes with Compression:</strong> Compatible with our modular backpack, these cubes compress to save 40% space and feature color-coding for easy organization.</p>
+                    <p style="margin-top: 1rem;"><strong>Magnetic Cable Organizers:</strong> Modular magnetic strips that attach inside bags or crates to keep cables, tools, and small items organized and accessible.</p>
+                    <p style="margin-top: 1rem;"><strong>Expandable Divider System:</strong> Adjustable dividers that work with both the backpack and crates, creating custom compartments for any item size.</p>
+                    <button class="cta-button invention-detail-btn" data-invention="complementary">Learn More</button>
+                    <div id="complementary-details" class="detail-content" style="display: none;">
+                        <h4>Complete Your Organization System</h4>
+                        <p><strong>Smart Packing Cubes with Compression:</strong> These aren't your ordinary packing cubes. Our compression-enabled cubes feature a dual-zipper system that allows you to pack items normally, then compress them down to save up to 40% more space. The cubes are color-coded (blue for clothes, red for tech, green for toiletries, etc.) and designed to fit perfectly within our modular backpack system. Made from ripstop nylon with see-through mesh panels, you can instantly see what's inside each cube. Whether you're packing for a weekend trip or organizing your gym bag, these cubes keep everything compressed, separated, and easy to find.</p>
+                        <p><strong>Magnetic Cable Organizers:</strong> Say goodbye to tangled cables and lost charging cords. Our magnetic cable management strips use powerful neodymium magnets to secure themselves inside bags, drawers, or our collapsible crates. The flexible silicone surface has channels that hold cables firmly in place but release easily when you need them. Each organizer can hold 4-6 cables depending on thickness, and multiple organizers can be linked together for larger setups. Perfect for travel tech kits, photography equipment bags, or workshop tool organization. The adhesive-free magnetic mounting means you can reposition them endlessly without leaving residue.</p>
+                        <p><strong>Expandable Divider System:</strong> Creating custom compartments has never been easier. Our expandable dividers feature telescoping panels that adjust from 6" to 18" in length, fitting both our modular backpack and collapsible crates (as well as most drawers and containers). The padded construction protects delicate items, while the reinforced structure keeps dividers standing upright even under load. Use them to create camera equipment compartments, organize tools by size, separate clean from dirty clothes, or protect fragile items during shipping. The dividers interconnect at 90-degree angles, letting you build complex organizational grids. It's like having custom foam inserts, but completely reconfigurable and reusable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests">
+            <h2>💭 What Are You Interested In?</h2>
+            <p style="margin-bottom: 2rem; color: #2e7d32;">Tell us what you're looking for and we'll customize our offerings just for you! Select your interests and we'll reach out with personalized recommendations and exclusive deals.</p>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: linear-gradient(135deg, #f1f8f4 0%, #e8f5e9 50%, #e3f2fd 100%); padding: 2rem; border-radius: 12px; border: 2px solid #81c784; border-left: 5px solid #2196f3;">
+                    
+                    <form id="interest-form">
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="font-weight: bold; color: #1b5e20; display: block; margin-bottom: 0.5rem;">Your Email:</label>
+                            <input type="email" id="customer-email" required placeholder="your.email@example.com" style="padding: 0.75rem; font-size: 1rem; border: 2px solid #81c784; border-radius: 8px; width: 100%; max-width: 400px;">
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="font-weight: bold; color: #1b5e20; display: block; margin-bottom: 1rem;">Select Your Interests (check all that apply):</label>
+                            
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                                <label style="display: flex; align-items: center; padding: 0.75rem; background: white; border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+                                    <input type="checkbox" name="interest" value="Tech Gadgets" style="margin-right: 0.5rem; width: 20px; height: 20px; cursor: pointer;">
+                                    <span>📱 Tech Gadgets</span>
+                                </label>
+                                
+                                <label style="display: flex; align-items: center; padding: 0.75rem; background: white; border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+                                    <input type="checkbox" name="interest" value="Gaming Collectibles" style="margin-right: 0.5rem; width: 20px; height: 20px; cursor: pointer;">
+                                    <span>🎮 Gaming Collectibles</span>
+                                </label>
+                                
+                                <label style="display: flex; align-items: center; padding: 0.75rem; background: white; border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+                                    <input type="checkbox" name="interest" value="Audio & Accessories" style="margin-right: 0.5rem; width: 20px; height: 20px; cursor: pointer;">
+                                    <span>🎧 Audio & Accessories</span>
+                                </label>
+                                
+                                <label style="display: flex; align-items: center; padding: 0.75rem; background: white; border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+                                    <input type="checkbox" name="interest" value="Home & Lifestyle" style="margin-right: 0.5rem; width: 20px; height: 20px; cursor: pointer;">
+                                    <span>🏠 Home & Lifestyle</span>
+                                </label>
+                                
+                                <label style="display: flex; align-items: center; padding: 0.75rem; background: white; border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+                                    <input type="checkbox" name="interest" value="Lawn Mowing Service" style="margin-right: 0.5rem; width: 20px; height: 20px; cursor: pointer;">
+                                    <span>🌱 Lawn Mowing Service</span>
+                                </label>
+                                
+                                <label style="display: flex; align-items: center; padding: 0.75rem; background: white; border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+                                    <input type="checkbox" name="interest" value="Gutter Cleaning Service" style="margin-right: 0.5rem; width: 20px; height: 20px; cursor: pointer;">
+                                    <span>🏠 Gutter Cleaning</span>
+                                </label>
+                                
+                                <label style="display: flex; align-items: center; padding: 0.75rem; background: white; border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+                                    <input type="checkbox" name="interest" value="Modular Backpack" style="margin-right: 0.5rem; width: 20px; height: 20px; cursor: pointer;">
+                                    <span>🎒 Modular Backpack</span>
+                                </label>
+                                
+                                <label style="display: flex; align-items: center; padding: 0.75rem; background: white; border-radius: 8px; cursor: pointer; transition: all 0.3s;">
+                                    <input type="checkbox" name="interest" value="Collapsible Crates" style="margin-right: 0.5rem; width: 20px; height: 20px; cursor: pointer;">
+                                    <span>📦 Collapsible Crates</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="font-weight: bold; color: #1b5e20; display: block; margin-bottom: 0.5rem;">Additional Comments (Optional):</label>
+                            <textarea id="customer-comments" placeholder="Any specific products or details you're looking for?" style="padding: 0.75rem; font-size: 1rem; border: 2px solid #81c784; border-radius: 8px; width: 100%; min-height: 100px; font-family: inherit;"></textarea>
+                        </div>
+
+                        <button type="submit" class="cta-button" style="width: 100%; max-width: 300px; display: block; margin: 0 auto;">
+                            ✉️ Send My Interests
+                        </button>
+                    </form>
+
+                    <div id="interest-success" style="display: none; margin-top: 2rem; padding: 1.5rem; background: #c8e6c9; border-radius: 8px; text-align: center;">
+                        <p style="color: #1b5e20; font-weight: bold; font-size: 1.2rem;">✅ Thank you! We've received your interests and will be in touch soon!</p>
+                    </div>
+
+                    <div id="interest-error" style="display: none; margin-top: 1rem; padding: 1rem; background: #ffcdd2; border-radius: 8px; text-align: center;">
+                        <p style="color: #c62828; font-weight: bold;">❌ Please select at least one interest before submitting.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="social-links" id="contact">
+            <h3>📱 Connect With Us!</h3>
+            <p style="margin-bottom: 1.5rem;">Follow Premier Tier on social media for exclusive deals, new products, and updates!</p>
+            <p style="margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: bold;">📞 Call or Text: <a href="tel:314-296-1296" style="color: white; text-decoration: underline;">314-296-1296</a></p>
+            <div class="social-icons">
+                <a href="https://www.snapchat.com/add/joshthomadsen" target="_blank" class="social-icon">
+                    <span>👻</span> Snapchat: @joshthomadsen
+                </a>
+                <a href="https://www.instagram.com/joshthomadsen" target="_blank" class="social-icon">
+                    <span>📸</span> Instagram: @joshthomadsen
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Premier Tier. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem;">Quality Products • Professional Services • Innovative Solutions</p>
+    </footer>
+
+    <!-- Modal for detailed information -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/quagga@0.12.1/dist/quagga.min.js"></script>
+    <script>
+        // Product Detail Toggle Functionality
+        document.querySelectorAll('.product-detail-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                const detailsId = category + '-details';
+                const detailsDiv = document.getElementById(detailsId);
+                
+                if (detailsDiv) {
+                    if (detailsDiv.style.display === 'none') {
+                        detailsDiv.style.display = 'block';
+                        this.textContent = 'Show Less';
+                    } else {
+                        detailsDiv.style.display = 'none';
+                        this.textContent = 'Learn More';
+                    }
+                }
+            });
+        });
+
+        // Service Detail Toggle Functionality
+        document.querySelectorAll('.service-detail-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const service = this.getAttribute('data-service');
+                const detailsId = service + '-details';
+                const detailsDiv = document.getElementById(detailsId);
+                
+                if (detailsDiv) {
+                    if (detailsDiv.style.display === 'none') {
+                        detailsDiv.style.display = 'block';
+                        this.textContent = 'Show Less';
+                    } else {
+                        detailsDiv.style.display = 'none';
+                        this.textContent = 'Learn More';
+                    }
+                }
+            });
+        });
+
+        // Invention Detail Toggle Functionality
+        document.querySelectorAll('.invention-detail-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const invention = this.getAttribute('data-invention');
+                const detailsId = invention + '-details';
+                const detailsDiv = document.getElementById(detailsId);
+                
+                if (detailsDiv) {
+                    if (detailsDiv.style.display === 'none') {
+                        detailsDiv.style.display = 'block';
+                        this.textContent = 'Show Less';
+                    } else {
+                        detailsDiv.style.display = 'none';
+                        this.textContent = 'Learn More';
+                    }
+                }
+            });
+        });
+
+        // Barcode Scanner JavaScript
+        const startScanBtn = document.getElementById('start-scan-btn');
+        const scanAgainBtn = document.getElementById('scan-again-btn');
+        const manualScanBtn = document.getElementById('manual-scan-btn');
+        const manualBarcodeInput = document.getElementById('manual-barcode');
+        const video = document.getElementById('barcode-video');
+        const scannerResult = document.getElementById('scanner-result');
+        const scannerError = document.getElementById('scanner-error');
+        const scannerControls = document.getElementById('scanner-controls');
+        
+        let isScanning = false;
+
+        // Start camera scanner
+        startScanBtn.addEventListener('click', function() {
+            if (isScanning) return;
+            
+            scannerError.style.display = 'none';
+            scannerResult.style.display = 'none';
+            video.style.display = 'block';
+            startScanBtn.textContent = '⏸️ Stop Scanner';
+            isScanning = true;
+            
+            Quagga.init({
+                inputStream: {
+                    name: "Live",
+                    type: "LiveStream",
+                    target: video,
+                    constraints: {
+                        facingMode: "environment"
+                    }
+                },
+                decoder: {
+                    readers: ["ean_reader", "ean_8_reader", "upc_reader", "upc_e_reader"]
+                }
+            }, function(err) {
+                if (err) {
+                    console.error(err);
+                    scannerError.textContent = 'Camera access denied or not available. Please use manual entry.';
+                    scannerError.style.display = 'block';
+                    video.style.display = 'none';
+                    startScanBtn.textContent = '📷 Start Camera Scanner';
+                    isScanning = false;
+                    return;
+                }
+                Quagga.start();
+            });
+        });
+
+        // Detect barcode
+        Quagga.onDetected(function(result) {
+            const code = result.codeResult.code;
+            Quagga.stop();
+            video.style.display = 'none';
+            isScanning = false;
+            startScanBtn.textContent = '📷 Start Camera Scanner';
+            lookupBarcode(code);
+        });
+
+        // Manual barcode lookup
+        manualScanBtn.addEventListener('click', function() {
+            const barcode = manualBarcodeInput.value.trim();
+            if (barcode) {
+                lookupBarcode(barcode);
+            } else {
+                scannerError.textContent = 'Please enter a barcode number.';
+                scannerError.style.display = 'block';
+            }
+        });
+
+        // Scan again button
+        scanAgainBtn.addEventListener('click', function() {
+            scannerResult.style.display = 'none';
+            manualBarcodeInput.value = '';
+            scannerError.style.display = 'none';
+        });
+
+        // Lookup barcode and get resell value
+        async function lookupBarcode(barcode) {
+            scannerError.style.display = 'none';
+            
+            // Show loading
+            document.getElementById('result-barcode').textContent = barcode;
+            document.getElementById('result-product').textContent = 'Loading...';
+            scannerResult.style.display = 'block';
+            
+            try {
+                // Try to fetch product info from UPC database API
+                const response = await fetch(`https://api.upcitemdb.com/prod/trial/lookup?upc=${barcode}`);
+                const data = await response.json();
+                
+                if (data.items && data.items.length > 0) {
+                    const item = data.items[0];
+                    const productName = item.title || 'Unknown Product';
+                    const category = item.category || 'General';
+                    const brand = item.brand || '';
+                    
+                    // Calculate estimated resell value (mock calculation)
+                    const resellValue = calculateResellValue(category, productName);
+                    
+                    document.getElementById('result-product').textContent = `${brand} ${productName}`.trim();
+                    document.getElementById('result-category').textContent = category;
+                    document.getElementById('result-value').textContent = resellValue.value;
+                    document.getElementById('result-notes').textContent = resellValue.notes;
+                } else {
+                    // Fallback if API doesn't have the product
+                    showFallbackResult(barcode);
+                }
+            } catch (error) {
+                console.error('API Error:', error);
+                showFallbackResult(barcode);
+            }
+        }
+
+        // Calculate resell value based on category and keywords
+        function calculateResellValue(category, productName) {
+            const nameLower = productName.toLowerCase();
+            let baseValue = 10;
+            let multiplier = 1;
+            let condition = 'good';
+            
+            // Category-based pricing
+            if (category.toLowerCase().includes('electronics') || 
+                nameLower.includes('phone') || nameLower.includes('tablet') ||
+                nameLower.includes('laptop') || nameLower.includes('console')) {
+                baseValue = 15;
+                multiplier = 1.5;
+            } else if (category.toLowerCase().includes('collectibles') ||
+                       nameLower.includes('vintage') || nameLower.includes('rare')) {
+                baseValue = 18;
+                multiplier = 2;
+            } else if (category.toLowerCase().includes('games') ||
+                       nameLower.includes('video game')) {
+                baseValue = 12;
+                multiplier = 1.3;
+            }
+            
+            const minValue = baseValue;
+            const maxValue = Math.round(baseValue * multiplier);
+            
+            let notes = `Best for quick flips. Market demand is moderate to high.`;
+            if (maxValue >= 20) {
+                notes = `High resell potential! Popular item with strong demand.`;
+            } else if (maxValue <= 12) {
+                notes = `Steady seller. Good for volume reselling.`;
+            }
+            
+            return {
+                value: `$${minValue} - $${maxValue}`,
+                notes: notes
+            };
+        }
+
+        // Fallback result when product not found in database
+        function showFallbackResult(barcode) {
+            document.getElementById('result-product').textContent = 'Product info not available';
+            document.getElementById('result-category').textContent = 'General Merchandise';
+            document.getElementById('result-value').textContent = '$10 - $15';
+            document.getElementById('result-notes').textContent = 'Estimated value based on typical resell margins. Check eBay/Amazon for more accurate pricing.';
+        }
+
+        // Allow enter key in manual input
+        manualBarcodeInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                manualScanBtn.click();
+            }
+        });
+
+        // Interest Form Handler
+        const interestForm = document.getElementById('interest-form');
+        const interestSuccess = document.getElementById('interest-success');
+        const interestError = document.getElementById('interest-error');
+
+        interestForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Get customer email
+            const customerEmail = document.getElementById('customer-email').value;
+            
+            // Get all checked interests
+            const checkboxes = document.querySelectorAll('input[name="interest"]:checked');
+            const interests = Array.from(checkboxes).map(cb => cb.value);
+            
+            // Get comments
+            const comments = document.getElementById('customer-comments').value;
+            
+            // Validate at least one interest is selected
+            if (interests.length === 0) {
+                interestError.style.display = 'block';
+                interestSuccess.style.display = 'none';
+                setTimeout(() => {
+                    interestError.style.display = 'none';
+                }, 3000);
+                return;
+            }
+            
+            // Hide error message
+            interestError.style.display = 'none';
+            
+            // Prepare email data
+            const emailData = {
+                to: 'your-email@example.com', // REPLACE THIS WITH YOUR ACTUAL EMAIL
+                subject: 'New Customer Interest from Premier Tier Website',
+                body: `
+New Customer Interest Submission:
+
+Customer Email: ${customerEmail}
+
+Selected Interests:
+${interests.map(interest => '• ' + interest).join('\n')}
+
+Additional Comments:
+${comments || 'None'}
+
+---
+Submitted on: ${new Date().toLocaleString()}
+                `.trim()
+            };
+            
+            try {
+                // Using EmailJS service (free tier available)
+                // You'll need to set up an account at emailjs.com and replace these IDs
+                
+                // For now, we'll use FormSubmit which is simpler
+                const formData = new FormData();
+                formData.append('email', customerEmail);
+                formData.append('interests', interests.join(', '));
+                formData.append('comments', comments);
+                formData.append('_subject', 'New Customer Interest - Premier Tier');
+                formData.append('_captcha', 'false');
+                
+                // IMPORTANT: Replace 'YOUR_EMAIL_HERE' with your actual email address
+                const response = await fetch('https://formsubmit.co/ajax/YOUR_EMAIL_HERE', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    // Show success message
+                    interestSuccess.style.display = 'block';
+                    interestForm.reset();
+                    
+                    // Scroll to success message
+                    interestSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        interestSuccess.style.display = 'none';
+                    }, 5000);
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                alert('There was an error submitting your interests. Please try emailing us directly at your-email@example.com or contact us on social media.');
+            }
+        });
+
+        // Add hover effect to checkbox labels
+        document.querySelectorAll('label:has(input[type="checkbox"])').forEach(label => {
+            label.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+                this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+            });
+            label.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('detailModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBody = document.getElementById('modalBody');
+        const closeModalBtn = document.querySelector('.close-modal');
+
+        // Detailed descriptions for each category
+        const detailContent = {
+            tech: {
+                title: '📱 Tech Gadgets - Personalized For You',
+                body: `
+                    <p>Our tech gadgets collection is carefully curated and <strong>personalized for you</strong> to ensure you get the best value for your money. We source quality pre-owned electronics that have been thoroughly tested and verified to work perfectly.</p>
+                    
+                    <p><strong>What You'll Find:</strong> Our inventory includes smartphone accessories like cases, screen protectors, and charging cables; Bluetooth speakers with excellent sound quality; wireless earbuds from trusted brands; portable chargers with various capacities; phone stands and mounts; USB accessories; and much more.</p>
+                    
+                    <p><strong>Quality Guarantee:</strong> Every tech item is personally inspected and tested before listing. We ensure all electronics are in good working condition, clean, and ready to use. Most items show minimal signs of wear and function like new.</p>
+                    
+                    <p><strong>Why Buy From Us:</strong> Unlike buying new at full price, our resold tech gadgets offer the same functionality at 50-70% off retail prices. You get name-brand quality without the premium price tag, and you're also helping the environment by giving electronics a second life!</p>
+                    
+                    <p><strong>Price Range:</strong> All items are priced between $10-$20, making premium technology accessible to everyone. We update our inventory regularly, so check back often for new arrivals!</p>
+                `
+            },
+            gaming: {
+                title: '🎮 Gaming Collectibles - Personalized For You',
+                body: `
+                    <p>Welcome to our gaming collectibles section, <strong>personalized for you</strong> with items that appeal to both casual gamers and serious collectors! We specialize in finding unique gaming merchandise that's hard to find elsewhere.</p>
+                    
+                    <p><strong>Our Collection Includes:</strong> Vintage gaming items from classic consoles; action figures from popular game franchises like Mario, Zelda, Pokémon, and more; trading cards including Pokémon, Magic: The Gathering, and Yu-Gi-Oh!; limited edition merchandise; gaming posters and artwork; retro game cartridges and accessories; collectible pins and patches.</p>
+                    
+                    <p><strong>For Collectors:</strong> We understand that condition matters for collectibles. Each item is accurately described with its condition clearly stated. Many items are in excellent or near-mint condition, perfect for display or collection.</p>
+                    
+                    <p><strong>Rare Finds:</strong> Part of what makes our collection special is that we're always hunting for unique pieces. You'll find items that are discontinued, regional exclusives, or limited releases that are difficult to find in regular stores.</p>
+                    
+                    <p><strong>Investment Potential:</strong> Many gaming collectibles appreciate in value over time. By purchasing at our affordable $10-$20 price point, you're getting items that could become more valuable as they become rarer.</p>
+                    
+                    <p><strong>Perfect For:</strong> Gift-giving, starting or expanding a collection, decorating your gaming setup, or treating yourself to a piece of gaming nostalgia!</p>
+                `
+            },
+            audio: {
+                title: '🎧 Audio & Accessories - Personalized For You',
+                body: `
+                    <p>Experience quality sound <strong>personalized for you</strong> without breaking the bank! Our audio collection features carefully selected items that deliver impressive performance at unbeatable prices.</p>
+                    
+                    <p><strong>Headphones & Earbuds:</strong> We carry over-ear headphones, on-ear models, and various earbud styles. Brands include popular names like Sony, JBL, Skullcandy, and more. Whether you need something for commuting, working out, or just relaxing at home, we have options that fit your lifestyle.</p>
+                    
+                    <p><strong>Speakers:</strong> Our speaker selection ranges from compact portable Bluetooth speakers perfect for outdoor adventures to desktop speakers ideal for your workspace. Many feature water resistance, long battery life, and surprisingly powerful sound quality.</p>
+                    
+                    <p><strong>Cables & Adapters:</strong> Don't overlook the importance of quality cables! We stock various audio cables including aux cables, adapter dongles, extension cables, and specialized connectors. Having the right cable makes all the difference.</p>
+                    
+                    <p><strong>Audio Accessories:</strong> Round out your audio setup with carrying cases, replacement ear cushions, cable organizers, microphone accessories, and more.</p>
+                    
+                    <p><strong>Tested & Working:</strong> Every audio item is tested to ensure both channels work properly, there's no crackling or distortion, and all features function as intended. We want you to enjoy your audio experience!</p>
+                    
+                    <p><strong>Great Sound, Small Price:</strong> Why pay $50-100 for new audio gear when you can get similar quality for $10-$20? Our audio products prove that great sound doesn't require a huge investment.</p>
+                `
+            },
+            home: {
+                title: '🏠 Home & Lifestyle - Personalized For You',
+                body: `
+                    <p>Upgrade your living space with smart home gadgets and lifestyle products <strong>personalized for you</strong>! Our home & lifestyle category brings modern convenience and style to your daily routine.</p>
+                    
+                    <p><strong>Smart Home Gadgets:</strong> We offer entry-level smart home devices that help you dip your toes into home automation without a massive investment. This includes smart plugs that let you control devices remotely, LED smart bulbs with color-changing capabilities, motion sensors, timers, and other automation tools.</p>
+                    
+                    <p><strong>LED Lighting:</strong> Transform any space with our selection of LED strip lights, desk lamps, ambient lighting, and decorative light fixtures. Perfect for creating the right mood for working, gaming, or relaxing.</p>
+                    
+                    <p><strong>Desk Accessories:</strong> Make your workspace more functional and stylish with phone holders, cable management solutions, desk organizers, pen holders, and other productivity-enhancing accessories.</p>
+                    
+                    <p><strong>Kitchen Gadgets:</strong> Small kitchen tools that make cooking and food prep easier – think measuring tools, can openers, vegetable peelers, and other essentials.</p>
+                    
+                    <p><strong>Personal Care Items:</strong> Travel-sized toiletry containers, grooming accessories, and portable personal care items perfect for home or travel.</p>
+                    
+                    <p><strong>Why These Matter:</strong> It's the small things that make a big difference in daily life. These affordable items add convenience, organization, and personality to your home without requiring a major purchase or renovation.</p>
+                    
+                    <p><strong>Always Useful:</strong> Unlike trendy items that lose their appeal, these practical lifestyle products remain useful year after year, making them smart purchases at any price point.</p>
+                `
+            },
+            lawn: {
+                title: '🌱 Lawn Mowing Service - Personalized For You',
+                body: `
+                    <p>Keep your lawn looking pristine with our professional mowing service, <strong>personalized for you</strong> and your property's unique needs! We don't just cut grass – we provide comprehensive lawn care that enhances your home's curb appeal.</p>
+                    
+                    <p><strong>What's Included:</strong> Our standard lawn mowing service includes precision cutting to the optimal height for your grass type, careful edging along sidewalks, driveways, and landscape borders for a crisp, clean look, trimming around obstacles like trees, fences, and garden beds, and thorough cleanup with all clippings removed and swept away.</p>
+                    
+                    <p><strong>Professional Equipment:</strong> We use commercial-grade lawn mowers that deliver a superior cut compared to consumer models. Our equipment is regularly maintained and always sharp, ensuring your grass is cut cleanly rather than torn, which promotes healthier growth.</p>
+                    
+                    <p><strong>Flexible Scheduling:</strong> We understand everyone's lawn care needs are different. That's why we offer flexible scheduling options: weekly service for fast-growing lawns during peak season, bi-weekly service for moderate maintenance, or one-time cuts for special occasions or when you're on vacation.</p>
+                    
+                    <p><strong>Personalized Approach:</strong> Every lawn is different, and we treat yours as unique. We'll assess your grass type, sun exposure, drainage patterns, and any problem areas to develop a mowing strategy that keeps your lawn looking its best. We adjust cutting height seasonally and can accommodate special requests.</p>
+                    
+                    <p><strong>Reliable & Punctual:</strong> We show up when we say we will. You'll get advance notice of scheduled visits and can count on consistent, reliable service. We work rain or shine (weather permitting) to stay on schedule.</p>
+                    
+                    <p><strong>Competitive Pricing:</strong> Our rates are straightforward and competitive. We provide free estimates based on your lawn size and specific needs, with no hidden fees or surprise charges.</p>
+                    
+                    <p><strong>The Benefits:</strong> Beyond just looking good, a well-maintained lawn prevents weed takeover, promotes thick, healthy grass growth, reduces allergens like pollen and dust, increases your property value, and gives you more free time to enjoy your weekends!</p>
+                `
+            },
+            gutter: {
+                title: '🏠 Gutter Cleaning Service - Personalized For You',
+                body: `
+                    <p>Protect your home's foundation and roof with our thorough gutter cleaning service, <strong>personalized for you</strong> and your property's specific needs. Clean gutters are essential for preventing costly water damage!</p>
+                    
+                    <p><strong>Complete Service:</strong> Our gutter cleaning isn't just surface-level. We remove all leaves, twigs, dirt, and debris from your gutters and downspouts. We flush the entire system with water to ensure proper flow, check for and report any damage or issues we discover, and ensure downspouts are directing water properly away from your foundation.</p>
+                    
+                    <p><strong>Why It Matters:</strong> Clogged gutters can cause serious problems including water damage to your foundation, basement flooding, roof damage and leaks, wood rot on fascia and soffit, mosquito breeding grounds in standing water, ice dams in winter, and landscape erosion. Regular cleaning prevents all of these issues.</p>
+                    
+                    <p><strong>When to Schedule:</strong> We recommend cleaning at least twice per year – once in late spring after tree pollen and seeds, and once in late fall after leaves have dropped. If you have a lot of trees near your home, quarterly cleaning might be beneficial.</p>
+                    
+                    <p><strong>Safety First:</strong> Gutter cleaning involves working at heights with ladders, which can be dangerous for homeowners. We have proper safety equipment, experience working on ladders, and insurance coverage. Let us handle the risk while you stay safely on the ground.</p>
+                    
+                    <p><strong>Thorough Inspection:</strong> While we're cleaning, we also inspect your gutter system for loose brackets, sagging sections, proper slope and pitch, seal integrity at seams and corners, and downspout connection points. We'll alert you to any issues so you can address them before they become major problems.</p>
+                    
+                    <p><strong>The Process:</strong> We start by removing large debris by hand, then use specialized tools to scrub out the sludge and grime, flush everything with water to check flow and find leaks, clean up all debris from your property, and provide you with a summary of what we found and any recommendations.</p>
+                    
+                    <p><strong>Preventive Maintenance:</strong> Regular gutter cleaning is one of the most cost-effective home maintenance tasks. Spending a modest amount on cleaning can save you thousands in water damage repairs down the road.</p>
+                    
+                    <p><strong>Customer Peace of Mind:</strong> After we're done, you can rest easy knowing your gutter system is functioning properly and protecting your home. We stand behind our work and your satisfaction is guaranteed.</p>
+                `
+            },
+            backpack: {
+                title: '🎒 Module Organization Backpack - Personalized For You',
+                body: `
+                    <p>Introducing our revolutionary Module Organization Backpack, <strong>personalized for you</strong> and designed to adapt to your ever-changing needs! This isn't just another backpack – it's a completely customizable carrying system that evolves with your lifestyle.</p>
+                    
+                    <p><strong>The Core Innovation:</strong> Unlike traditional backpacks with fixed compartments, our modular system uses removable internal modules that attach via a combination of strong magnets and velcro. You can completely reconfigure the interior layout in seconds, without any tools or complicated mechanisms.</p>
+                    
+                    <p><strong>Included Modules:</strong> Each backpack comes with a variety of organizational modules: padded dividers for electronics and fragile items, zippered pouches for small accessories, mesh pockets for visibility, document sleeves for papers and folders, key clips and carabiners, and water bottle holders. Additional specialty modules are available for purchase.</p>
+                    
+                    <p><strong>Real-World Use Cases:</strong> For students: configure it Monday-Wednesday for books and laptop, then switch to gym gear and sports equipment Thursday-Friday. For photographers: dedicate one layout to camera equipment with custom padding, then reorganize for travel with clothing and accessories. For commuters: work setup during the week, outdoor adventure setup on weekends. The possibilities are endless!</p>
+                    
+                    <p><strong>Quality Construction:</strong> The main backpack is built from durable water-resistant polyester with reinforced stitching at all stress points. Heavy-duty YKK zippers that won't break or snag. Padded, breathable back panel and shoulder straps for comfort even when fully loaded. Reflective strips for visibility in low light. Multiple external pockets for quick-access items.</p>
+                    
+                    <p><strong>Smart Design Features:</strong> External USB charging port (connect your power bank inside), hidden anti-theft pocket on the back panel, luggage sleeve to attach to rolling suitcases, bottle holders that expand when needed and compress when empty, and reinforced laptop compartment fits up to 15.6" laptops.</p>
+                    
+                    <p><strong>The Modular Advantage:</strong> Never carry empty, wasted space. Only use the modules you need for that day's activities. If a module gets damaged, replace just that part instead of buying a new backpack. Add specialty modules as your needs grow. Share modules between family members who have compatible backpacks.</p>
+                    
+                    <p><strong>Sustainability Factor:</strong> By making only part of the system replaceable and adaptable, one backpack can serve multiple purposes across many years, reducing waste and the need to purchase multiple specialized bags.</p>
+                    
+                    <p><strong>Perfect For:</strong> Students who need versatility, photographers and content creators, commuters and business travelers, outdoor enthusiasts, parents managing kids' activities, anyone who values organization and adaptability.</p>
+                    
+                    <p><strong>Size Options:</strong> Available in three sizes: Compact (20L) for daily carry, Standard (30L) for most users, and Large (40L) for extended trips. All sizes use the same modular system, so modules are interchangeable.</p>
+                `
+            },
+            crates: {
+                title: '📦 Collapsible Shipping Crates - Personalized For You',
+                body: `
+                    <p>Transform your storage and shipping with our innovative Collapsible Shipping Crates, <strong>personalized for you</strong> to solve the age-old problem of bulky storage containers! These crates collapse flat when empty, saving up to 75% of storage space.</p>
+                    
+                    <p><strong>The Core Problem We Solve:</strong> Traditional plastic storage bins and shipping crates take up the same amount of space whether they're full or empty. If you need 20 crates for moving day but only 5 for regular storage, you're stuck finding room for 15 empty bins. Our collapsible design eliminates this problem completely.</p>
+                    
+                    <p><strong>How They Work:</strong> Our patented hinge system allows the crate walls to fold down in seconds without requiring tools or complicated latches. The bottom and sides fold completely flat for storage. When needed, simply pop the crate back up – it locks securely in place automatically. Even a child can operate them safely.</p>
+                    
+                    <p><strong>Construction & Durability:</strong> Made from industrial-grade polypropylene plastic that won't crack, warp, or break under normal use. Reinforced corners and edges for extra durability. Weather-resistant design works in hot, cold, wet, or dry conditions. UV-stabilized to prevent sun damage when used outdoors. Each crate holds up to 50 pounds when properly loaded.</p>
+                    
+                    <p><strong>Smart Stacking Design:</strong> These crates stack efficiently both when full and when collapsed. Full crates have nesting lips that prevent sliding and allow stable stacking up to 10 units high. Collapsed crates stack flat with minimal height – you can store 20 collapsed crates in the same space as 2 traditional bins.</p>
+                    
+                    <p><strong>Ventilation & Visibility:</strong> Perforated sides allow airflow, preventing musty odors in stored items and allowing wet items to dry. The open design lets you see contents at a glance without opening. Available in multiple colors for easy categorization and identification.</p>
+                    
+                    <p><strong>Use Cases:</strong> Moving and relocation: rent a truck once instead of making multiple trips with fewer bins. Seasonal storage: expand your storage capacity when decorating season arrives, collapse when done. Small business shipping: keep inventory compact until orders arrive, then expand as needed. Farmers markets and craft fairs: transport products efficiently, collapse empties to maximize space for goods on the return trip. Garage and basement organization: store everything from tools to holiday decorations. Commercial warehousing: reduce warehouse footprint dramatically.</p>
+                    
+                    <p><strong>Size Specifications:</strong> When expanded: 24" L x 16" W x 12" H. When collapsed: 24" L x 16" W x 2" H. Interior volume: approximately 2.5 cubic feet. Weight capacity: 50 lbs. Empty weight: just 3.5 lbs each.</p>
+                    
+                    <p><strong>Environmental Benefits:</strong> By reducing storage space requirements, fewer storage facilities are needed overall. The reusable design eliminates the need for cardboard boxes. Durable construction means they last for years, possibly decades, instead of being replaced frequently. Made from recyclable materials.</p>
+                    
+                    <p><strong>Cost Savings:</strong> Buy once and use forever – no need to repeatedly purchase moving boxes. Reduce or eliminate storage unit costs by maximizing your existing space. Commercial users save on warehouse space costs. If you move or ship frequently, these pay for themselves quickly.</p>
+                    
+                    <p><strong>Accessories Available:</strong> Locking lids for security and stacking stability, dolly that fits the crate dimensions perfectly for easy transport, divider inserts to create sections within the crate, and weatherproof covers for outdoor storage.</p>
+                `
+            },
+            complementary: {
+                title: '🔧 Complementary Innovations - Personalized For You',
+                body: `
+                    <p>Maximize your organization system with our complementary innovations, <strong>personalized for you</strong> to work seamlessly with our modular backpack and collapsible crates! These accessories take your organization to the next level.</p>
+                    
+                    <p><strong>Smart Packing Cubes with Compression:</strong> These aren't your ordinary packing cubes. Our patented compression system uses a double-zipper mechanism that compresses contents by up to 40% without requiring vacuum sealing or pumps. Simply pack your items, zip the first zipper to close the cube, then zip the second compression zipper to squeeze out excess air. The cubes are perfectly sized to fit in our modular backpack compartments and also work great in our collapsible crates.</p>
+                    
+                    <p><strong>Features of Packing Cubes:</strong> Color-coded options (5 different colors) help you categorize items – blue for clothes, red for electronics, green for toiletries, etc. See-through mesh top panels let you identify contents without opening. Water-resistant exterior protects contents from spills and weather. Grab handles make them easy to pull out and move between bags. Compatible with TSA regulations and airline carry-on requirements.</p>
+                    
+                    <p><strong>Use Cases for Packing Cubes:</strong> Travel: separate clean from dirty clothes, organize by outfit or by day. Gym bags: keep sweaty clothes separated from clean items. Work: organize tech cables and chargers separate from documents. Home storage: compress seasonal clothing in crates. Kids' activities: keep sports uniforms, art supplies, and homework organized.</p>
+                    
+                    <p><strong>Magnetic Cable Organizers:</strong> One of the most frustrating parts of any bag or storage system is tangled cables. Our magnetic cable organizer strips solve this problem elegantly. These flexible magnetic strips attach to the interior walls of our backpacks or to the bottom of our crates using strong 3M adhesive backing.</p>
+                    
+                    <p><strong>How Cable Organizers Work:</strong> The strips contain strong neodymium magnets at regular intervals. Small magnetic clips slide along the strip and lock in place wherever you position them. Wrap cables around the clips to keep them neat and separated. Remove and reposition clips instantly without tools. Each strip can hold 5-8 cables depending on thickness.</p>
+                    
+                    <p><strong>Beyond Cables:</strong> These organizers aren't just for cables! Use them for pens and markers, small tools like screwdrivers and Allen keys, keys and carabiners, scissors and craft supplies, zip ties and twist ties, first aid items like bandages and scissors, and any other small metal or magnetic objects.</p>
+                    
+                    <p><strong>Expandable Divider System:</strong> Our expandable dividers give you ultimate control over your storage space. Made from durable corrugated plastic with telescoping side panels, these dividers adjust to fit various container widths and create custom compartments for any item size.</p>
+                    
+                    <p><strong>Divider Specifications:</strong> Adjusts from 12" to 24" in width and 8" to 16" in height. Snap-lock mechanism holds the size you set without slipping. Works in both our modular backpacks and collapsible crates. Can be oriented vertically or horizontally. Create multiple compartments by using several dividers together.</p>
+                    
+                    <p><strong>Divider Applications:</strong> In backpacks: separate laptop from books, create a dedicated camera equipment section, or organize art supplies by type. In crates: store tools without them rolling around, organize pantry items by category, separate fragile items, or create a mobile office supply station.</p>
+                    
+                    <p><strong>The Complete System Advantage:</strong> When you use all these components together, you create a truly personalized organization system. The modular backpack provides the main carrying solution. Collapsible crates handle bulk storage and shipping. Packing cubes compress and categorize contents. Magnetic organizers tame cables and small items. Expandable dividers create perfect-fit compartments.</p>
+                    
+                    <p><strong>Mix and Match:</strong> You don't need to buy everything at once. Start with what you need most and add components as your needs grow. All items are designed to work independently or as part of the complete system. Each accessory enhances the others but also provides value on its own.</p>
+                    
+                    <p><strong>Quality Guarantee:</strong> Like all our innovations, these complementary products are built to last. We use quality materials and thoughtful design to ensure years of reliable use. If any component fails under normal use, we'll replace it free of charge.</p>
+                    
+                    <p><strong>Perfect For Gift Giving:</strong> These organizational accessories make excellent gifts for anyone who values efficiency and order – students starting college, newlyweds setting up their home, travelers, professionals who commute, parents, really anyone!</p>
+                `
+            }
+        };
+
+        // Open modal with content
+        function openModal(category) {
+            const content = detailContent[category];
+            if (content) {
+                modalTitle.textContent = content.title;
+                modalBody.innerHTML = content.body;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+        }
+
+        // Close modal
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Event listeners for Learn More buttons
+        document.querySelectorAll('.product-detail-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                openModal(category);
+            });
+        });
+
+        document.querySelectorAll('.service-detail-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const service = this.getAttribute('data-service');
+                openModal(service);
+            });
+        });
+
+        document.querySelectorAll('.invention-detail-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const invention = this.getAttribute('data-invention');
+                openModal(invention);
+            });
+        });
+
+        // Close modal when clicking X button
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Close modal when clicking outside the modal content
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && modal.style.display === 'block') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
