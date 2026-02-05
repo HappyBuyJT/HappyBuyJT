@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappyBuy JT - Gadgets, Collectibles & Innovative Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1a3a1a;
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+        }
+
+        header {
+            background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 0 20px;
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .emoji {
+            font-size: 3rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        nav {
+            background: #1b5e20;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: #2e7d32;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(46, 125, 50, 0.15);
+            border: 2px solid #a5d6a7;
+        }
+
+        h2 {
+            color: #2e7d32;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #66bb6a;
+            padding-bottom: 0.5rem;
+        }
+
+        .product-grid, .service-grid, .invention-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f1f8f4 0%, #e8f5e9 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid #81c784;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(46, 125, 50, 0.2);
+        }
+
+        .card h3 {
+            color: #1b5e20;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: #2e7d32;
+            line-height: 1.8;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #388e3c;
+            margin-top: 1rem;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #43a047 0%, #66bb6a 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(46, 125, 50, 0.3);
+        }
+
+        .social-links {
+            background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .social-links h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            background: white;
+            color: #2e7d32;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+            border-left: 5px solid #fbc02d;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .emoji {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <span class="emoji">🛍️</span>
+            <h1>HappyBuy JT</h1>
+            <span class="emoji">👍</span>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#inventions">Inventions</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>Welcome to HappyBuy JT!</h2>
+            <p style="font-size: 1.2rem; color: #2e7d32;">Your one-stop shop for quality resold gadgets, collectibles, professional services, and innovative products. We're dedicated to bringing you great value and cutting-edge solutions!</p>
+        </section>
+
+        <section id="products">
+            <h2>🔥 Featured Products</h2>
+            <p style="margin-bottom: 2rem; color: #2e7d32;">Discover our curated selection of gadgets and collectibles, all priced affordably between $10-$20!</p>
+            
+            <div class="product-grid">
+                <div class="card">
+                    <h3>📱 Tech Gadgets</h3>
+                    <p>Quality pre-owned electronics including phone accessories, Bluetooth speakers, wireless earbuds, and portable chargers. All tested and guaranteed to work!</p>
+                    <p class="price">$10 - $20</p>
+                    <button class="cta-button">Browse Tech</button>
+                </div>
+                
+                <div class="card">
+                    <h3>🎮 Gaming Collectibles</h3>
+                    <p>Vintage gaming items, action figures, trading cards, and limited edition collectibles. Perfect for enthusiasts and collectors alike!</p>
+                    <p class="price">$10 - $20</p>
+                    <button class="cta-button">Explore Collection</button>
+                </div>
+                
+                <div class="card">
+                    <h3>🎧 Audio & Accessories</h3>
+                    <p>Headphones, speakers, cables, and audio accessories. Great sound quality without breaking the bank!</p>
+                    <p class="price">$10 - $20</p>
+                    <button class="cta-button">Shop Audio</button>
+                </div>
+                
+                <div class="card">
+                    <h3>🏠 Home & Lifestyle</h3>
+                    <p>Smart home gadgets, desk accessories, LED lights, and other lifestyle products to enhance your daily routine.</p>
+                    <p class="price">$10 - $20</p>
+                    <button class="cta-button">View Items</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>🛠️ Professional Services</h2>
+            <p style="margin-bottom: 2rem; color: #2e7d32;">Quality home maintenance services you can count on!</p>
+            
+            <div class="service-grid">
+                <div class="card">
+                    <h3>🌱 Lawn Mowing</h3>
+                    <p>Professional lawn care services to keep your yard looking pristine. Regular maintenance, edging, and cleanup included. We use quality equipment and pay attention to detail to ensure your lawn looks its best.</p>
+                    <div class="highlight-box">
+                        <strong>✓ Weekly/Bi-weekly scheduling available</strong><br>
+                        <strong>✓ Professional equipment</strong><br>
+                        <strong>✓ Reliable and punctual service</strong>
+                    </div>
+                    <button class="cta-button">Request Quote</button>
+                </div>
+                
+                <div class="card">
+                    <h3>🏠 Gutter Cleaning</h3>
+                    <p>Thorough gutter cleaning to protect your home from water damage. We remove all debris, flush downspouts, and inspect for any issues. Keep your gutters flowing freely!</p>
+                    <div class="highlight-box">
+                        <strong>✓ Complete debris removal</strong><br>
+                        <strong>✓ Downspout flushing</strong><br>
+                        <strong>✓ Safety-conscious approach</strong>
+                    </div>
+                    <button class="cta-button">Book Service</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="inventions">
+            <h2>💡 Innovative Products</h2>
+            <p style="margin-bottom: 2rem; color: #2e7d32;">Check out our original inventions designed to make your life easier and more organized!</p>
+            
+            <div class="invention-grid">
+                <div class="card">
+                    <h3>🎒 Module Organization Backpack</h3>
+                    <p>Revolutionary modular backpack system with customizable interior compartments. Attach and rearrange pockets, dividers, and pouches to fit your exact needs. Perfect for students, travelers, photographers, and professionals who need adaptable storage solutions.</p>
+                    <div class="highlight-box">
+                        <strong>Features:</strong><br>
+                        • Interchangeable internal modules<br>
+                        • Magnetic/velcro attachment system<br>
+                        • Water-resistant materials<br>
+                        • Multiple configuration options<br>
+                        • Laptop compartment compatible
+                    </div>
+                    <button class="cta-button">Learn More</button>
+                </div>
+                
+                <div class="card">
+                    <h3>📦 Collapsible Shipping Crates</h3>
+                    <p>Space-saving, eco-friendly shipping and storage solution. These heavy-duty crates fold flat when not in use, saving up to 75% storage space. Ideal for moving, shipping products, organizing garages, or commercial use.</p>
+                    <div class="highlight-box">
+                        <strong>Features:</strong><br>
+                        • Folds flat in seconds<br>
+                        • Stackable design (loaded or empty)<br>
+                        • Durable plastic construction<br>
+                        • Holds up to 50 lbs<br>
+                        • Reusable and sustainable
+                    </div>
+                    <button class="cta-button">See Details</button>
+                </div>
+                
+                <div class="card">
+                    <h3>🔧 Complementary Innovations</h3>
+                    <p><strong>Smart Packing Cubes with Compression:</strong> Compatible with our modular backpack, these cubes compress to save 40% space and feature color-coding for easy organization.</p>
+                    <p style="margin-top: 1rem;"><strong>Magnetic Cable Organizers:</strong> Modular magnetic strips that attach inside bags or crates to keep cables, tools, and small items organized and accessible.</p>
+                    <p style="margin-top: 1rem;"><strong>Expandable Divider System:</strong> Adjustable dividers that work with both the backpack and crates, creating custom compartments for any item size.</p>
+                    <button class="cta-button">Explore System</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="social-links" id="contact">
+            <h3>📱 Connect With Us!</h3>
+            <p style="margin-bottom: 1.5rem;">Follow HappyBuy JT on social media for exclusive deals, new products, and updates!</p>
+            <div class="social-icons">
+                <a href="https://www.snapchat.com/add/joshthomadsen" target="_blank" class="social-icon">
+                    <span>👻</span> Snapchat: @joshthomadsen
+                </a>
+                <a href="https://www.instagram.com/joshthomadsen" target="_blank" class="social-icon">
+                    <span>📸</span> Instagram: @joshthomadsen
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 HappyBuy JT. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem;">Quality Products • Professional Services • Innovative Solutions</p>
+    </footer>
+</body>
+</html>
